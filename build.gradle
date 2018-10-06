@@ -1,0 +1,37 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'org.junit.platform:junit-platform-gradle-plugin:1.1.0'
+    }
+}
+ 
+apply plugin: 'java'
+apply plugin: 'org.junit.platform.gradle.plugin'
+ 
+repositories {
+	jcenter()
+    mavenCentral()
+}
+ 
+dependencies {
+    compile 'joda-time:joda-time:2.2'
+    compile 'org.slf4j:slf4j-api:1.7.24'
+    testCompile(
+            'junit:junit:4.12',
+            'org.junit.jupiter:junit-jupiter-api:5.1.0',
+            'org.mockito:mockito-core:2.+'
+    )
+    testRuntime(
+            'org.junit.jupiter:junit-jupiter-engine:5.1.0',
+            'org.junit.vintage:junit-vintage-engine:5.1.0',
+            'org.junit.platform:junit-platform-launcher:1.1.0',
+            'org.junit.platform:junit-platform-runner:1.1.0'
+    )
+}
+
+jar {
+    baseName = 'safety-monitoring'
+    version = '0.1.0'
+}
