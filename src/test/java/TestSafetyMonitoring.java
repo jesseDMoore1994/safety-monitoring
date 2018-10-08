@@ -1,5 +1,5 @@
 import java.io.PrintStream;
-import hello.HelloWorld;
+import safety_monitoring.SafetyMonitoring;
 import org.junit.jupiter.api.Test;
 import static org.mockito.Matchers.matches;
 import static org.mockito.Mockito.mock;
@@ -11,7 +11,7 @@ class HelloWorldTest {
     void testMainFunction() {
         PrintStream out = mock(PrintStream.class);
         System.setOut(out);
-        HelloWorld.main(new String[]{});
+        SafetyMonitoring.main(new String[]{});
         verify(out).println(matches("Hello world!"));
     }
 }

@@ -1,4 +1,4 @@
-package hello;
+package safety_monitoring;
 
 public class Greeter {
   public String sayHello() {

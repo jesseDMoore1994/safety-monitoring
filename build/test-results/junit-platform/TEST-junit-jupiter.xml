@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="JUnit Jupiter" tests="2" skipped="0" failures="0" errors="0" time="0.382" hostname="jmoore-N170RF1" timestamp="2018-10-06T15:32:31">
+<testsuite name="JUnit Jupiter" tests="7" skipped="0" failures="0" errors="0" time="0.419" hostname="jmoore-N170RF1" timestamp="2018-10-07T20:32:04">
 <properties>
 <property name="awt.toolkit" value="sun.awt.X11.XToolkit"/>
 <property name="file.encoding" value="UTF-8"/>
@@ -7,7 +7,7 @@
 <property name="file.separator" value="/"/>
 <property name="java.awt.graphicsenv" value="sun.awt.X11GraphicsEnvironment"/>
 <property name="java.awt.printerjob" value="sun.print.PSPrinterJob"/>
-<property name="java.class.path" value="/home/jmoore/projects/safety-monitoring/build/classes/java/test:/home/jmoore/projects/safety-monitoring/build/resources/test:/home/jmoore/projects/safety-monitoring/build/classes/java/main:/home/jmoore/projects/safety-monitoring/build/resources/main:/home/jmoore/.gradle/caches/modules-2/files-2.1/joda-time/joda-time/2.2/a5f29a7acaddea3f4af307e8cf2d0cc82645fd7d/joda-time-2.2.jar:/home/jmoore/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-api/1.7.24/3f6b4bd4f8dbe8d4bea06d107a3826469b85c3e9/slf4j-api-1.7.24.jar:/home/jmoore/.gradle/caches/modules-2/files-2.1/org.junit.vintage/junit-vintage-engine/5.1.0/a752dd045d08753ac77622dc83b584dc5abda1e1/junit-vintage-engine-5.1.0.jar:/home/jmoore/.gradle/caches/modules-2/files-2.1/org.junit.platform/junit-platform-runner/1.1.0/d47029ff19c88cdf86324f29e70c6b26adad6c8b/junit-platform-runner-1.1.0.jar:/home/jmoore/.gradle/caches/modules-2/files-2.1/junit/junit/4.12/2973d150c0dc1fefe998f834810d68f278ea58ec/junit-4.12.jar:/home/jmoore/.gradle/caches/modules-2/files-2.1/org.junit.jupiter/junit-jupiter-engine/5.1.0/c54b96b465bb5b49c7708d734a4180dd95422754/junit-jupiter-engine-5.1.0.jar:/home/jmoore/.gradle/caches/modules-2/files-2.1/org.junit.jupiter/junit-jupiter-api/5.1.0/370218fbc7ce9cf0600c4b5db400bccdf0c01a48/junit-jupiter-api-5.1.0.jar:/home/jmoore/.gradle/caches/modules-2/files-2.1/org.mockito/mockito-core/2.23.0/497ddb32fd5d01f9dbe99a2ec790aeb931dff1b1/mockito-core-2.23.0.jar:/home/jmoore/.gradle/caches/modules-2/files-2.1/org.junit.platform/junit-platform-launcher/1.1.0/ba098edde4e59cacd9225e238ea3ad9c946684ab/junit-platform-launcher-1.1.0.jar:/home/jmoore/.gradle/caches/modules-2/files-2.1/org.hamcrest/hamcrest-core/1.3/42a25dc3219429f0e5d060061f71acb49bf010a0/hamcrest-core-1.3.jar:/home/jmoore/.gradle/caches/modules-2/files-2.1/org.junit.platform/junit-platform-engine/1.1.0/2596bd4d909e7ea8d029272db4338075445d731b/junit-platform-engine-1.1.0.jar:/home/jmoore/.gradle/caches/modules-2/files-2.1/org.junit.platform/junit-platform-suite-api/1.1.0/ed577e96850aec4a2e610b26b7a09fafb17faef7/junit-platform-suite-api-1.1.0.jar:/home/jmoore/.gradle/caches/modules-2/files-2.1/org.junit.platform/junit-platform-commons/1.1.0/d6aa21029f9cedfb4cc8a9e9efc0bd97987205b8/junit-platform-commons-1.1.0.jar:/home/jmoore/.gradle/caches/modules-2/files-2.1/org.apiguardian/apiguardian-api/1.0.0/3ef5276905e36f4d8055fe3cb0bdcc7503ffc85d/apiguardian-api-1.0.0.jar:/home/jmoore/.gradle/caches/modules-2/files-2.1/org.opentest4j/opentest4j/1.0.0/6f09c598e9ff64bf0ce2fa7e7de49a99ba83c0b4/opentest4j-1.0.0.jar:/home/jmoore/.gradle/caches/modules-2/files-2.1/net.bytebuddy/byte-buddy/1.9.0/8cb0d5baae526c9df46ae17693bbba302640538b/byte-buddy-1.9.0.jar:/home/jmoore/.gradle/caches/modules-2/files-2.1/net.bytebuddy/byte-buddy-agent/1.9.0/37b5703b4a6290be3fffc63ae9c6bcaaee0ff856/byte-buddy-agent-1.9.0.jar:/home/jmoore/.gradle/caches/modules-2/files-2.1/org.objenesis/objenesis/2.6/639033469776fd37c08358c6b92a4761feb2af4b/objenesis-2.6.jar:/home/jmoore/.gradle/caches/modules-2/files-2.1/org.junit.platform/junit-platform-console/1.1.0/1ea376db54ab4ec0018c5e99d414e1c7c034387/junit-platform-console-1.1.0.jar"/>
+<property name="java.class.path" value="/home/jmoore/projects/safety-monitoring/build/classes/java/test:/home/jmoore/projects/safety-monitoring/build/resources/test:/home/jmoore/projects/safety-monitoring/build/classes/java/main:/home/jmoore/projects/safety-monitoring/build/resources/main:/home/jmoore/.gradle/caches/modules-2/files-2.1/joda-time/joda-time/2.2/a5f29a7acaddea3f4af307e8cf2d0cc82645fd7d/joda-time-2.2.jar:/home/jmoore/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-api/1.7.24/3f6b4bd4f8dbe8d4bea06d107a3826469b85c3e9/slf4j-api-1.7.24.jar:/home/jmoore/.gradle/caches/modules-2/files-2.1/org.junit.vintage/junit-vintage-engine/5.1.0/a752dd045d08753ac77622dc83b584dc5abda1e1/junit-vintage-engine-5.1.0.jar:/home/jmoore/.gradle/caches/modules-2/files-2.1/org.junit.platform/junit-platform-runner/1.1.0/d47029ff19c88cdf86324f29e70c6b26adad6c8b/junit-platform-runner-1.1.0.jar:/home/jmoore/.gradle/caches/modules-2/files-2.1/junit/junit/4.12/2973d150c0dc1fefe998f834810d68f278ea58ec/junit-4.12.jar:/home/jmoore/.gradle/caches/modules-2/files-2.1/org.junit.jupiter/junit-jupiter-engine/5.1.0/c54b96b465bb5b49c7708d734a4180dd95422754/junit-jupiter-engine-5.1.0.jar:/home/jmoore/.gradle/caches/modules-2/files-2.1/org.junit.jupiter/junit-jupiter-api/5.1.0/370218fbc7ce9cf0600c4b5db400bccdf0c01a48/junit-jupiter-api-5.1.0.jar:/home/jmoore/.gradle/caches/modules-2/files-2.1/org.mockito/mockito-core/2.23.0/497ddb32fd5d01f9dbe99a2ec790aeb931dff1b1/mockito-core-2.23.0.jar:/home/jmoore/.gradle/caches/modules-2/files-2.1/org.hamcrest/hamcrest-all/1.3/63a21ebc981131004ad02e0434e799fd7f3a8d5a/hamcrest-all-1.3.jar:/home/jmoore/.gradle/caches/modules-2/files-2.1/org.junit.platform/junit-platform-launcher/1.1.0/ba098edde4e59cacd9225e238ea3ad9c946684ab/junit-platform-launcher-1.1.0.jar:/home/jmoore/.gradle/caches/modules-2/files-2.1/org.hamcrest/hamcrest-core/1.3/42a25dc3219429f0e5d060061f71acb49bf010a0/hamcrest-core-1.3.jar:/home/jmoore/.gradle/caches/modules-2/files-2.1/org.junit.platform/junit-platform-engine/1.1.0/2596bd4d909e7ea8d029272db4338075445d731b/junit-platform-engine-1.1.0.jar:/home/jmoore/.gradle/caches/modules-2/files-2.1/org.junit.platform/junit-platform-suite-api/1.1.0/ed577e96850aec4a2e610b26b7a09fafb17faef7/junit-platform-suite-api-1.1.0.jar:/home/jmoore/.gradle/caches/modules-2/files-2.1/org.junit.platform/junit-platform-commons/1.1.0/d6aa21029f9cedfb4cc8a9e9efc0bd97987205b8/junit-platform-commons-1.1.0.jar:/home/jmoore/.gradle/caches/modules-2/files-2.1/org.apiguardian/apiguardian-api/1.0.0/3ef5276905e36f4d8055fe3cb0bdcc7503ffc85d/apiguardian-api-1.0.0.jar:/home/jmoore/.gradle/caches/modules-2/files-2.1/org.opentest4j/opentest4j/1.0.0/6f09c598e9ff64bf0ce2fa7e7de49a99ba83c0b4/opentest4j-1.0.0.jar:/home/jmoore/.gradle/caches/modules-2/files-2.1/net.bytebuddy/byte-buddy/1.9.0/8cb0d5baae526c9df46ae17693bbba302640538b/byte-buddy-1.9.0.jar:/home/jmoore/.gradle/caches/modules-2/files-2.1/net.bytebuddy/byte-buddy-agent/1.9.0/37b5703b4a6290be3fffc63ae9c6bcaaee0ff856/byte-buddy-agent-1.9.0.jar:/home/jmoore/.gradle/caches/modules-2/files-2.1/org.objenesis/objenesis/2.6/639033469776fd37c08358c6b92a4761feb2af4b/objenesis-2.6.jar:/home/jmoore/.gradle/caches/modules-2/files-2.1/org.junit.platform/junit-platform-console/1.1.0/1ea376db54ab4ec0018c5e99d414e1c7c034387/junit-platform-console-1.1.0.jar"/>
 <property name="java.class.version" value="52.0"/>
 <property name="java.endorsed.dirs" value="/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/endorsed"/>
 <property name="java.ext.dirs" value="/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext:/usr/java/packages/lib/ext"/>
@@ -55,7 +55,7 @@
 <property name="user.timezone" value="America/Chicago"/>
 <property name="user.variant" value=""/>
 </properties>
-<testcase name="testMainFunction()" classname="HelloWorldTest" time="0.356">
+<testcase name="testMainFunction()" classname="HelloWorldTest" time="0.382">
 <system-out><![CDATA[
 unique-id: [engine:junit-jupiter]/[class:HelloWorldTest]/[method:testMainFunction()]
 display-name: testMainFunction()
@@ -65,6 +65,36 @@ display-name: testMainFunction()
 <system-out><![CDATA[
 unique-id: [engine:junit-jupiter]/[class:GreeterTest]/[method:testSayHello()]
 display-name: testSayHello()
+]]></system-out>
+</testcase>
+<testcase name="testGetName()" classname="RoomTest" time="0.001">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:RoomTest]/[method:testGetName()]
+display-name: testGetName()
+]]></system-out>
+</testcase>
+<testcase name="testWindowList()" classname="RoomTest" time="0.001">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:RoomTest]/[method:testWindowList()]
+display-name: testWindowList()
+]]></system-out>
+</testcase>
+<testcase name="testDoorList()" classname="RoomTest" time="0.001">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:RoomTest]/[method:testDoorList()]
+display-name: testDoorList()
+]]></system-out>
+</testcase>
+<testcase name="testDoorState()" classname="DoorTest" time="0.004">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:DoorTest]/[method:testDoorState()]
+display-name: testDoorState()
+]]></system-out>
+</testcase>
+<testcase name="testWindowState()" classname="WindowTest" time="0">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:WindowTest]/[method:testWindowState()]
+display-name: testWindowState()
 ]]></system-out>
 </testcase>
 <system-out><![CDATA[
