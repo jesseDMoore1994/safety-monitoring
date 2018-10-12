@@ -35,33 +35,24 @@ public class VeryImportantCompany {
       return null;
   }
 
-  public String getWindowStatusFromRoom(String roomName, int windowIndex) {
-      Room targetRoom = getRoomByName(roomName);
-      Window targetWindow = null;
-      if(targetRoom == null) {
-          return "Target room does not exist.";
-      } else {
-          try {
-              targetWindow = targetRoom.getWindowByIndex(windowIndex);
-          }
-          catch(IndexOutOfBoundsException exception) {
-              return "Target window does not exist.";
-          }
-          return targetWindow.getState();
+  public String getWindowStatus(int windowIndex) {
+      Window targetWindow;
+      try {
+          targetWindow = getRoomByName("VIP Room").getWindowByIndex(windowIndex);
       }
+      catch(IndexOutOfBoundsException exception) {
+          return "Target window does not exist.";
+      }
+      return targetWindow.getState();
+      
   }
   
-  public String getDoorStatusFromRoom(String roomName, String doorName) {
-      Room targetRoom = getRoomByName(roomName);
-      if(targetRoom == null) {
-          return "Target room does not exist.";
+  public String getDoorStatus(String doorName) {
+      Door targetDoor = getRoomByName("Receptionist Room").getDoorByName(doorName);
+      if(targetDoor == null) {
+          return "Target door does not exist.";
       } else {
-          Door targetDoor = targetRoom.getDoorByName(doorName);
-          if(targetDoor == null) {
-              return "Target door does not exist.";
-          } else {
-              return targetDoor.getState();
-          }
+          return targetDoor.getState();
       }
   }
 }
