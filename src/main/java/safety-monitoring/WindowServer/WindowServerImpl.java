@@ -7,10 +7,9 @@ import javax.jws.WebService;
 public class WindowServerImpl implements WindowServer{
  
 	@Override
-	public String WindowServer(String name) {
+	public String WindowServer(int window_index) {
 
-		System.out.println(name+" says hello");
-		return "Hello World " + name;
+		return "Hello World ";
 	}
  
 }

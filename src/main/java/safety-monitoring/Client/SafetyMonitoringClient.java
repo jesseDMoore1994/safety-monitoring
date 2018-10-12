@@ -12,20 +12,27 @@ creates a service instance manually. */
 public class SafetyMonitoringClient{
  
 	public static void main(String[] args) throws Exception {
- 
-	URL location_of_wsdl = new URL("http://localhost:8080/window?wsdl");
- 
-        QName name_of_service = new QName("http://windowserver/", "WindowServerImplService");
- 
-        Service windowService = Service.create(location_of_wsdl, name_of_service);
- 
-        WindowServer hello = windowService.getPort(WindowServer.class);
-
-
-	String response = hello.WindowServer(args[0]);
- 
-        System.out.println(response);
- 
+        if(args[0].equals("Window"))
+        {
+    	    URL location_of_wsdl = new URL("http://localhost:8080/window?wsdl");
+            QName name_of_service = new QName("http://windowserver/", "WindowServerImplService");
+            Service windowService = Service.create(location_of_wsdl, name_of_service);
+            WindowServer window = windowService.getPort(WindowServer.class);
+	        String response = window.WindowServer(Integer.parseInt(args[1]));
+            System.out.println(response);
+        } else if (args[0].equals("Door"))
+        {
+    	    URL location_of_wsdl = new URL("http://localhost:8080/door?wsdl");
+            QName name_of_service = new QName("http://doorserver/", "DoorServerImplService");
+            Service doorService = Service.create(location_of_wsdl, name_of_service);
+            DoorServer door = doorService.getPort(DoorServer.class);
+	        String response = door.DoorServer(args[1]);
+            System.out.println(response);
+        } else {
+            String errStr = "First Argument Not Recognized, select door sensors with the string";
+            errStr += "\"Door\" or window sensors with the string \"Window\" as the first argument.";
+            System.out.println(errStr);
+        }
     }
  
 }
