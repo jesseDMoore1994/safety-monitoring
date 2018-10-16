@@ -15,7 +15,7 @@ public class SafetyMonitoringClient{
         if(args[0].equals("Window"))
         {
     	    URL location_of_wsdl = new URL("http://localhost:8080/window?wsdl");
-            QName name_of_service = new QName("http://windowserver/", "WindowServerImplService");
+            QName name_of_service = new QName("http://safety_monitoring/", "WindowServerImplService");
             Service windowService = Service.create(location_of_wsdl, name_of_service);
             WindowServer window = windowService.getPort(WindowServer.class);
 	        String response = window.WindowServer(Integer.parseInt(args[1]));
@@ -23,13 +23,13 @@ public class SafetyMonitoringClient{
         } else if (args[0].equals("Door"))
         {
     	    URL location_of_wsdl = new URL("http://localhost:8080/door?wsdl");
-            QName name_of_service = new QName("http://doorserver/", "DoorServerImplService");
+            QName name_of_service = new QName("http://safety_monitoring/", "DoorServerImplService");
             Service doorService = Service.create(location_of_wsdl, name_of_service);
             DoorServer door = doorService.getPort(DoorServer.class);
 	        String response = door.DoorServer(args[1]);
             System.out.println(response);
         } else {
-            String errStr = "First Argument Not Recognized, select door sensors with the string";
+            String errStr = "First argument not recognized, select door sensors with the string ";
             errStr += "\"Door\" or window sensors with the string \"Window\" as the first argument.";
             System.out.println(errStr);
         }

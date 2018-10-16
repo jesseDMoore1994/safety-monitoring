@@ -9,7 +9,7 @@ public class WindowServerImpl implements WindowServer{
 	@Override
 	public String WindowServer(int window_index) {
 
-		return "Hello World ";
+		return "Half Open.";
 	}
  
 }

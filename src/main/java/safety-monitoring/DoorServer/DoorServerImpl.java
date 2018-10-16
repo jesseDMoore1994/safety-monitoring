@@ -9,8 +9,7 @@ public class DoorServerImpl implements DoorServer{
 	@Override
 	public String DoorServer(String name) {
 
-		System.out.println(name+" says hello");
-		return "Hello World " + name;
+		return "Open.";
 	}
  
 }
