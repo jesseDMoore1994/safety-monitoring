@@ -36,7 +36,8 @@ class SafetyMonitoringClientTest {
     void testExerciseWindowInterface() {
 	    System.setOut(new PrintStream(outContent));
 	    System.setErr(new PrintStream(errContent));
-        WindowServerPublisher.main(new String[] {});
+        WindowServerPublisher p = new WindowServerPublisher();
+        p.publish();
         try {
             SafetyMonitoringClient.main(new String[] {"Window", "1"});
         } catch (Exception ex) {
@@ -52,7 +53,8 @@ class SafetyMonitoringClientTest {
     void testExerciseDoorInterface() {
 	    System.setOut(new PrintStream(outContent));
 	    System.setErr(new PrintStream(errContent));
-        DoorServerPublisher.main(new String[] {});
+        DoorServerPublisher p = new DoorServerPublisher();
+        p.publish();
         try {
             SafetyMonitoringClient.main(new String[] {"Door", "VIP Door"});
         } catch (Exception ex) {
