@@ -36,8 +36,8 @@ class RoomTest {
     @Test
     void testWindowList() {
         Room testRoom = new Room("my room");
-        Window window1 = new Window(1);
-        Window window2 = new Window(1);
+        Window window1 = new Window(0, 1);
+        Window window2 = new Window(1, 1);
         testRoom.addWindow(window1);
         testRoom.addWindow(window2);
 		assertEquals(testRoom.getWindowByIndex(0), window1);

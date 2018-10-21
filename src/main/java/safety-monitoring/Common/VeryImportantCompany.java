@@ -7,8 +7,8 @@ public class VeryImportantCompany {
   private static VeryImportantCompany singleInstance = null;
 
   private VeryImportantCompany(){
-      Window window1 = new Window(1000);
-      Window window2 = new Window(1000);
+      Window window1 = new Window(0, 1000);
+      Window window2 = new Window(1, 1000);
 
       Door entryDoor = new Door("Entry Door", 1000);
       Door vipDoor = new Door("VIP Door", 1000);
