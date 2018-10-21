@@ -1,6 +1,8 @@
 This is a JAX-WS java project to simulate sensor data from doors and windows.
+This application is built and supported in java 1.8.0 since subsequent versions of java remove JAX-WS
 
-Problem description:
+Problem description
+--------------------------------------------------------------------------------------------------------
 Two servers:
    doors:
        [
@@ -35,6 +37,15 @@ Door server
     output:
         if door name exists, return status.
 
+
+Installation and usage instructions
+---------------------------------------------------------------------------------------------------------
+
+This application has been proven to run on the machines in the linux lab in the UAH CS department. There is a small hiccup with the machines in that the default ENV sets the java version to 10,
+    which does not easily support JAX-WS as the Java EE features have already been removed. Luckily, there are older versions installed that do support JAX-WS out on /netshare.
+
+if you are running this application on a machine in the linux lab, be sure to run `source configure_env` to adjust the ENV to use java 1.8. When you want to restore your old ENV settings,
+    run `source unconfigure_env` to restore what you had previously.
 
 To build (Linux):
     open a command prompt and navigate to this directory.
