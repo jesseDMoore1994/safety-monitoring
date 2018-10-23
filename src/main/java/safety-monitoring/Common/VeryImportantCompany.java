@@ -4,10 +4,11 @@ import java.util.*;
 public class VeryImportantCompany {
 
   private ArrayList<Room> rooms = new ArrayList<Room>();
+  private static VeryImportantCompany singleInstance = null;
 
-  public VeryImportantCompany(){
-      Window window1 = new Window(1000);
-      Window window2 = new Window(1000);
+  private VeryImportantCompany(){
+      Window window1 = new Window(0, 1000);
+      Window window2 = new Window(1, 1000);
 
       Door entryDoor = new Door("Entry Door", 1000);
       Door vipDoor = new Door("VIP Door", 1000);
@@ -54,5 +55,12 @@ public class VeryImportantCompany {
       } else {
           return targetDoor.getState();
       }
+  }
+
+  public static VeryImportantCompany getInstance() {
+      if (singleInstance == null)
+          singleInstance = new VeryImportantCompany();
+      
+      return singleInstance;
   }
 }

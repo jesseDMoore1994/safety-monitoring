@@ -40,6 +40,7 @@ public class Door {
   
   public void changeState() {
     currentDoorState = doorStates.get(randGen.nextInt(doorStates.size()));
+    System.out.println(doorName+" state changed to "+currentDoorState);
   }
 
 }

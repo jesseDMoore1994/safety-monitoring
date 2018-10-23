@@ -14,7 +14,7 @@ public class SafetyMonitoringClient{
 	public static void main(String[] args) throws Exception {
         if(args[0].equals("Window"))
         {
-    	    URL location_of_wsdl = new URL("http://localhost:8080/window?wsdl");
+    	    URL location_of_wsdl = new URL("http://localhost:8081/window?wsdl");
             QName name_of_service = new QName("http://safety_monitoring/", "WindowServerImplService");
             Service windowService = Service.create(location_of_wsdl, name_of_service);
             WindowServer window = windowService.getPort(WindowServer.class);

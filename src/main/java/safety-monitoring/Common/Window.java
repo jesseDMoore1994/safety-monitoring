@@ -7,6 +7,7 @@ public class Window {
   private String currentWindowState = new String();
   private Random randGen = new Random();
   private Timer stateTimer = new Timer();
+  private int windowNumber;
   private static class MyWindowTimeTask extends TimerTask
   {
       private Window myWindow;
@@ -20,11 +21,12 @@ public class Window {
       }
   }
 
-  public Window(long period){
+  public Window(int windowNumber, long period){
     windowStates.add("Open.");
     windowStates.add("Half Open.");
     windowStates.add("Closed but not Locked.");
     windowStates.add("Closed and Locked.");
+    this.windowNumber = windowNumber;
     changeState();
     stateTimer.schedule(new MyWindowTimeTask(this), 0, period);
   }
@@ -35,6 +37,7 @@ public class Window {
   
   public void changeState() {
     currentWindowState = windowStates.get(randGen.nextInt(windowStates.size()));
+    System.out.println("Window "+windowNumber+" state changed to "+currentWindowState);
   }
 
 }

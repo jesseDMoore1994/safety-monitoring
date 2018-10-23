@@ -16,7 +16,6 @@ repositories {
 }
  
 dependencies {
-    compile 'joda-time:joda-time:2.2'
     compile 'org.slf4j:slf4j-api:1.7.24'
     testCompile(
             'junit:junit:4.12',
@@ -34,5 +33,5 @@ dependencies {
 
 jar {
     baseName = 'safety-monitoring'
-    version = '0.1.0'
+    version = '1.0.0'
 }

@@ -14,7 +14,7 @@ import static org.mockito.Mockito.verify;
  
 class VeryImportantCompanyTest {
 
-    private VeryImportantCompany vic = new VeryImportantCompany();
+    private VeryImportantCompany vic = VeryImportantCompany.getInstance();
     private ArrayList<String> expectedWindowReturns = new ArrayList<String>();
     private ArrayList<String> expectedDoorReturns = new ArrayList<String>();
 

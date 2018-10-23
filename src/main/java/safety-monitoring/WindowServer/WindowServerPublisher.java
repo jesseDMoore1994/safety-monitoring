@@ -6,8 +6,8 @@ import safety_monitoring.WindowServerImpl;
 //Endpoint publisher
 public class WindowServerPublisher{
  
-	public static void main(String[] args) {
-	   Endpoint.publish("http://localhost:8080/window", new WindowServerImpl());
+	public static void publish() {
+	   Endpoint.publish("http://localhost:8081/window", new WindowServerImpl());
     }
  
 }
