@@ -8,8 +8,7 @@ public class DoorServerImpl implements DoorServer{
  
 	@Override
 	public String DoorServer(String name) {
-
-		return "Open.";
+		return VeryImportantCompany.getInstance().getDoorStatus(name);
 	}
  
 }

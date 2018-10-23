@@ -29,8 +29,39 @@ class SafetyMonitoringClientTest {
 
     private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
     private final ByteArrayOutputStream errContent = new ByteArrayOutputStream();
+    private ArrayList<String> expectedWindowReturns = new ArrayList<String>();
+    private ArrayList<String> expectedDoorReturns = new ArrayList<String>();
     private final PrintStream originalOut = System.out;
     private final PrintStream originalErr = System.err;
+
+    public SafetyMonitoringClientTest () {
+        expectedWindowReturns.add("Open.");
+        expectedWindowReturns.add("Half Open.");
+        expectedWindowReturns.add("Closed but not Locked.");
+        expectedWindowReturns.add("Closed and Locked.");
+        expectedDoorReturns.add("Open.");
+        expectedDoorReturns.add("Closed but not Locked.");
+        expectedDoorReturns.add("Closed and Locked.");
+    }
+
+    private boolean stringInArr(String target, ArrayList<String> arr) {
+        for ( String str : arr) {
+            if ( str.equals(target) ) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    private ArrayList<String> removeEmptyStrings(String[] arr) {
+        ArrayList<String> ret = new ArrayList<String>();
+        for ( String str : arr) {
+            if (!str.equals("")) {
+                ret.add(str);
+            }
+        }
+        return ret;
+    }
 
     @Test
     void testExerciseWindowInterface() {
@@ -44,7 +75,13 @@ class SafetyMonitoringClientTest {
             originalOut.println(ex.toString());
             fail();   
         }
-        assertEquals("Half Open.\n", outContent.toString());
+        ArrayList<String> lines = removeEmptyStrings(outContent.toString().split("\n", -1));
+        assertTrue(
+            stringInArr(
+                lines.get(lines.size()-1), 
+                expectedWindowReturns
+            )
+        );
         System.setOut(originalOut);
 	    System.setErr(originalErr);
     }
@@ -61,7 +98,13 @@ class SafetyMonitoringClientTest {
             originalOut.println(ex.toString());
             fail();
         }
-        assertEquals("Open.\n", outContent.toString());
+        ArrayList<String> lines = removeEmptyStrings(outContent.toString().split("\n", -1));
+        assertTrue(
+            stringInArr(
+                lines.get(lines.size()-1), 
+                expectedWindowReturns
+            )
+        );
 	    System.setOut(originalOut);
 	    System.setErr(originalErr);
     }

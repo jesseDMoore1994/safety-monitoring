@@ -18,12 +18,12 @@ public class VeryImportantCompany {
   //the constructor is private so it can only be called by the class itself
   private VeryImportantCompany(){
       //create windows for simulation
-      Window window1 = new Window(0, 1000);
-      Window window2 = new Window(1, 1000);
+      Window window1 = new Window(0, 5000);
+      Window window2 = new Window(1, 5000);
 
       //create doors for sumulation
-      Door entryDoor = new Door("Entry Door", 1000);
-      Door vipDoor = new Door("VIP Door", 1000);
+      Door entryDoor = new Door("Entry Door", 5000);
+      Door vipDoor = new Door("VIP Door", 5000);
 
       //create the rooms for the simulation
       Room receptionistRoom = new Room("Receptionist Room");

@@ -8,8 +8,7 @@ public class WindowServerImpl implements WindowServer{
  
 	@Override
 	public String WindowServer(int window_index) {
-
-		return "Half Open.";
+		return VeryImportantCompany.getInstance().getWindowStatus(window_index);
 	}
  
 }
