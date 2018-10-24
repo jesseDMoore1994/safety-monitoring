@@ -2,7 +2,6 @@ package safety_monitoring;
 import java.util.*;
 
 public class Door {
-
   private ArrayList<String> doorStates = new ArrayList<String>();
   private String currentDoorState = new String();
   private Random randGen = new Random();

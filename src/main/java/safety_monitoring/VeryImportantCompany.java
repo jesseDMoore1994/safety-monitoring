@@ -3,7 +3,7 @@ import java.util.*;
 
 public class VeryImportantCompany {
 
-  private ArrayList<Room> rooms = new ArrayList<Room>();
+  private ArrayList<safety_monitoring.Room> rooms = new ArrayList<Room>();
 
   public VeryImportantCompany(){
       Window window1 = new Window(1000);

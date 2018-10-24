@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/safety-monitoring.iml" filepath="$PROJECT_DIR$/safety-monitoring.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/safety-monitoring_main.iml" filepath="$PROJECT_DIR$/.idea/modules/safety-monitoring_main.iml" group="safety-monitoring" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/safety-monitoring_test.iml" filepath="$PROJECT_DIR$/.idea/modules/safety-monitoring_test.iml" group="safety-monitoring" />
+    </modules>
+  </component>
+</project>

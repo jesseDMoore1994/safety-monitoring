@@ -4,6 +4,7 @@ import java.util.*;
 public class Room {
 
   private ArrayList<Door> doors = new ArrayList<Door>();
+  private Map<String, Door> DoorDict = new HashMap<>();
   private ArrayList<Window> windows = new ArrayList<Window>();
   private String name;
 
@@ -12,7 +13,7 @@ public class Room {
   }
   
   public void addDoor(Door newDoor) {
-      doors.add(newDoor);
+      DoorDict.put(newDoor.getName(), newDoor);
   }
   
   public void addWindow(Window newWindow) {
@@ -24,12 +25,7 @@ public class Room {
   }
 
   public Door getDoorByName(String name) {
-      for ( Door door : doors) {
-          if(door.getName().equals(name)) {
-              return door;
-          }
-      }
-      return null;
+      return DoorDict.get(name);
   }
 
   public Window getWindowByIndex(int idx) {
