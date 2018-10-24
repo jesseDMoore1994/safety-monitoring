@@ -14,7 +14,7 @@ import static org.mockito.Mockito.verify;
  
 class VeryImportantCompanyTest {
 
-    private VeryImportantCompany vic = new VeryImportantCompany();
+    private VeryImportantCompany vic = VeryImportantCompany.getInstance();
     private ArrayList<String> expectedWindowReturns = new ArrayList<String>();
     private ArrayList<String> expectedDoorReturns = new ArrayList<String>();
 
@@ -39,36 +39,16 @@ class VeryImportantCompanyTest {
     }
  
     @Test
-    void testGetWindowStatusFromRoom() {
-		assertTrue(stringInArr(vic.getWindowStatusFromRoom("VIP Room", 0), expectedWindowReturns));
-		assertTrue(stringInArr(vic.getWindowStatusFromRoom("VIP Room", 1), expectedWindowReturns));
-		assertEquals(vic.getWindowStatusFromRoom("VIP Room", 3), "Target window does not exist.");
-		assertEquals(vic.getWindowStatusFromRoom("Fake Room", 0), "Target room does not exist.");
+    void testGetWindowStatus() {
+		assertTrue(stringInArr(vic.getWindowStatus(0), expectedWindowReturns));
+		assertTrue(stringInArr(vic.getWindowStatus(1), expectedWindowReturns));
+		assertEquals(vic.getWindowStatus(2), "Target window does not exist.");
     }
  
     @Test
-    void testGetDoorStatusFromRoom() {
-		assertTrue(stringInArr(vic.getDoorStatusFromRoom("VIP Room", "VIP Door"), expectedDoorReturns));
-        assertTrue(stringInArr(vic.getDoorStatusFromRoom("Receptionist Room", "Entry Door"), expectedDoorReturns));
-        assertTrue(stringInArr(vic.getDoorStatusFromRoom("Receptionist Room", "VIP Door"), expectedDoorReturns));
-		assertEquals(vic.getDoorStatusFromRoom("Fake Room", "VIP Door"), "Target room does not exist.");
-		assertEquals(vic.getDoorStatusFromRoom("VIP Room", "Fake Door"), "Target door does not exist.");
-    }
- 
-    @Test
-    void testCheckVIPRoomBoundaries() {
-		assertTrue(stringInArr(vic.getDoorStatusFromRoom("VIP Room", "VIP Door"), expectedDoorReturns));
-		assertEquals(vic.getDoorStatusFromRoom("VIP Room", "Entry Door"), "Target door does not exist.");
-		assertTrue(stringInArr(vic.getWindowStatusFromRoom("VIP Room", 0), expectedWindowReturns));
-		assertTrue(stringInArr(vic.getWindowStatusFromRoom("VIP Room", 1), expectedWindowReturns));
-		assertEquals(vic.getWindowStatusFromRoom("VIP Room", 2), "Target window does not exist.");
-    }
- 
-    @Test
-    void testCheckReceptionistRoomBoundaries() {
-		assertTrue(stringInArr(vic.getDoorStatusFromRoom("Receptionist Room", "VIP Door"), expectedDoorReturns));
-		assertTrue(stringInArr(vic.getDoorStatusFromRoom("Receptionist Room", "Entry Door"), expectedDoorReturns));
-		assertEquals(vic.getDoorStatusFromRoom("Receptionist Room", "Fake Door"), "Target door does not exist.");
-		assertEquals(vic.getWindowStatusFromRoom("Receptionist Room", 0), "Target window does not exist.");
+    void testGetDoorStatus() {
+        assertTrue(stringInArr(vic.getDoorStatus("Entry Door"), expectedDoorReturns));
+        assertTrue(stringInArr(vic.getDoorStatus("VIP Door"), expectedDoorReturns));
+		assertEquals(vic.getDoorStatus("Fake Door"), "Target door does not exist.");
     }
 }

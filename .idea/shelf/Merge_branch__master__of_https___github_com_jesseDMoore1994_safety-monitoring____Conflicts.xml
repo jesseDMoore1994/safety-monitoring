@@ -1,0 +1,44 @@
+<changelist name="Merge_branch_'master'_of_https___github_com_jesseDMoore1994_safety-monitoring__#_Conflicts" date="1540425129375" recycled="false">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Merge_branch_'master'_of_https___github_com_jesseDMoore1994_safety-monitoring__#_Conflicts/shelved.patch" />
+  <option name="DESCRIPTION" value="Merge branch 'master' of https://github.com/jesseDMoore1994/safety-monitoring  # Conflicts: #&#9;gradle/wrapper/gradle-wrapper.properties #&#9;src/main/java/safety-monitoring/Common/Room.java #&#9;src/main/java/safety-monitoring/Room.java #&#9;src/main/java/safety_monitoring/Door.java #&#9;src/main/java/safety_monitoring/Greeter.java #&#9;src/main/java/safety_monitoring/Room.java #&#9;src/main/java/safety_monitoring/VeryImportantCompany.java #&#9;src/main/java/safety_monitoring/Window.java" />
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/classes/safety_monitoring/Door$MyDoorTimeTask.class" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/classes/safety_monitoring/Door.class" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/classes/safety_monitoring/Greeter.class" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/classes/safety_monitoring/Room.class" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/classes/safety_monitoring/SafetyMonitoring.class" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/classes/safety_monitoring/VeryImportantCompany.class" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/classes/safety_monitoring/Window$MyWindowTimeTask.class" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/classes/safety_monitoring/Window.class" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+</changelist>
