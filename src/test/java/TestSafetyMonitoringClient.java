@@ -39,7 +39,7 @@ class SafetyMonitoringClientTest {
         WindowServerPublisher p = new WindowServerPublisher();
         p.publish();
         try {
-            SafetyMonitoringClient.main(new String[] {"Window", "1"});
+            SafetyMonitoringClient.main(new String[] {"Window", "VIPWindowNorth"});
         } catch (Exception ex) {
             originalOut.println(ex.toString());
             fail();   

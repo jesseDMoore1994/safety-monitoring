@@ -44,7 +44,12 @@ public class Room {
 
   //this function returns a Window object with an index equal to the argument int
   //if it exists, otherwise it returns null
-  public Window getWindowByIndex(int idx) {
-      return windows.get(idx);
+  public Window getWindowByName(String windowName) {
+    for ( Window window : windows) {
+        if(window.getName().equals(name)) {
+            return window;
+        }
+    }
+    return null;
   }
 }

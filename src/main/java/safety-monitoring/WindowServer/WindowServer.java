@@ -11,6 +11,6 @@ import javax.jws.soap.SOAPBinding.Style;
 
 public interface WindowServer{
  
-	@WebMethod String WindowServer(int window_index);
+	@WebMethod String WindowServer(String window_sensor);
  
 }

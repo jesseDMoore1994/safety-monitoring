@@ -18,8 +18,8 @@ public class VeryImportantCompany {
   //the constructor is private so it can only be called by the class itself
   private VeryImportantCompany(){
       //create windows for simulation
-      Window window1 = new Window(0, 1000);
-      Window window2 = new Window(1, 1000);
+      Window window1 = new Window("VIPWindowNorth", 1000);
+      Window window2 = new Window("VIPWindowEast", 1000);
 
       //create doors for sumulation
       Door entryDoor = new Door("Entry Door", 1000);
@@ -55,24 +55,21 @@ public class VeryImportantCompany {
   }
 
 
-  //this function will return the state of the window with the index equal to the argument
+  //this function will return the state of the window with a name that matches the argument
   //from the VIP Room if it exists, otherwise it try to get a window and fail. We catch
   //the error and return an error string.
   //We do not use the receptionist room because it has no windows.
-  public String getWindowStatus(int windowIndex) {
+  public String getWindowStatus(String windowName) {
       //get window reference
-      Window targetWindow;
-      try {
-          //try to assign the window
-          targetWindow = getRoomByName("VIP Room").getWindowByIndex(windowIndex);
-      }//if we get an IndexOutOfBoundsException, we know that the index does not exist in the room
-      catch(IndexOutOfBoundsException exception) {
-          //return error string instead of failing
-          return "Target window does not exist.";
-      }
-      //return the target window state
-      return targetWindow.getState();
-      
+      Window targetWindow = getRoomByName("VIP Room").getWindowByName(windowName);
+      //if targetWindow is null then a window by that name does not exist
+      if(targetWindow == null) {
+          //return error string
+          return "No window by name "+windowName+" exists.";
+      } else {
+          //return the target window state
+          return targetWindow.getState();
+      }      
   }
   
   //this function will return the state of the door with the name equal to the argument

@@ -21,7 +21,7 @@ public class SafetyMonitoringClient{
             WindowServer window = windowService.getPort(WindowServer.class);
 
             //use the wsdl interface and print out the response
-	        String response = window.WindowServer(Integer.parseInt(args[1]));
+	        String response = window.WindowServer(args[1]);
             System.out.println(response);
         } else if (args[0].equals("Door")) //If the first arg is the string "Door", we are selecting from the door interface
         {
