@@ -42,7 +42,7 @@ class VeryImportantCompanyTest {
     void testGetWindowStatus() {
 		assertTrue(stringInArr(vic.getWindowStatus("VIPWindowNorth"), expectedWindowReturns));
 		assertTrue(stringInArr(vic.getWindowStatus("VIPWindowEast"), expectedWindowReturns));
-		assertEquals(vic.getWindowStatus(2), "Target window does not exist.");
+		assertEquals(vic.getWindowStatus("DOS"), "Target window does not exist.");
     }
  
     @Test

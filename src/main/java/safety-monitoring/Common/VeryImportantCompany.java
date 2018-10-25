@@ -54,6 +54,17 @@ public class VeryImportantCompany {
       return null;
   }
 
+  public ArrayList<Window> getWindows(){
+		ArrayList<Window> allWindows = new ArrayList<Window>();
+		for (Room room: rooms){
+			for (Window window: room.getWindows()){
+				if (!allWindows.contains(window)){
+					allWindows.add(window);
+				}
+			}
+		}
+		return allWindows;
+	}
 
   //this function will return the state of the window with a name that matches the argument
   //from the VIP Room if it exists, otherwise it try to get a window and fail. We catch
