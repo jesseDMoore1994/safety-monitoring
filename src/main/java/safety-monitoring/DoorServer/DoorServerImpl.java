@@ -8,15 +8,20 @@ import javax.jws.WebService;
 public class DoorServerImpl implements DoorServer {
     //Service Implementation
 
-    private HashMap<String, Door> DoorList = new HashMap<String, Door>();
+    private HashMap<String, safety_monitoring.Door> DoorList = new HashMap<String, safety_monitoring.Door>();
 
     @Override
     public String DoorServer(String door_sensor) {
         
         // See if we have heard from this sensor. If so, get a reference to it
         safety_monitoring.VeryImportantCompany VIC = safety_monitoring.VeryImportantCompany.getInstance();
-        HashMap<String, Door> DoorDict = VIC.GetDoorList();
-        return DoorDict.getOrDefault(door_sensor, null);
+        HashMap<String, safety_monitoring.Door> DoorDict = VIC.GetDoorList();
+        Door targetDoor = DoorDict.getOrDefault(door_sensor, null);
+        if (targetDoor == null){
+            return door_sensor+" is not currently being monitored.";
+        } else {
+            return targetDoor.getState();
+        }
     }
 
 

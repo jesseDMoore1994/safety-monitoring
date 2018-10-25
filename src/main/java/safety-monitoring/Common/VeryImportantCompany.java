@@ -39,6 +39,10 @@ public class VeryImportantCompany {
       vipRoom.addWindow(window1);
       vipRoom.addWindow(window2);
 
+      //add doors to door dictionary
+      DoorDict.put("Entry Door", entryDoor);
+      DoorDict.put("VIP Door", vipDoor);
+
       //finally, add the rooms to very important companies list of rooms
       rooms.add(receptionistRoom);
       rooms.add(vipRoom);
@@ -46,7 +50,7 @@ public class VeryImportantCompany {
 
   //this function will return a room with a name equal to the argument
   //if it exists, otherwise it will return null
-  private Room getRoomByName(String roomName) {
+  public Room getRoomByName(String roomName) {
       for ( Room room : rooms ) {
           if(room.getName().equals(roomName)) {
               return room;

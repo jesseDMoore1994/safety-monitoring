@@ -1,6 +1,7 @@
 package safety_monitoring;
  
 import java.net.URL;
+import java.util.*;
 import javax.xml.namespace.QName;
 import javax.xml.ws.Service;
 import safety_monitoring.WindowServer;
@@ -34,12 +35,8 @@ public class SafetyMonitoringClient{
             System.out.println(response);
         } else if (args[0].equals("Door")) //If the first arg is the string "Door", we are selecting from the door interface
         {
-            //create the server from the published wsdl document
-            Service doorService = Service.create(location_of_wsdl, name_of_service);
-            DoorServer doorServer = doorService.getPort(DoorServer.class);
-
             //use the wsdl interface and print out the response
-	        String response = door.DoorServer(args[1]);
+	        String response = doorServer.DoorServer(args[1]);
             System.out.println(response);
         } else if(args[0].equals("Room"))
         {
@@ -49,7 +46,7 @@ public class SafetyMonitoringClient{
 			
 			if (room != null){
 				ArrayList<Window> windows = room.getWindows();
-				System.out.println("--Windows in "+args[1]+"--")
+				System.out.println("--Windows in "+args[1]+"--");
 				for (Window window : windows){
 					//use the wsdl interface and print out the response
 					String response = windowServer.WindowServer(window.getName());
