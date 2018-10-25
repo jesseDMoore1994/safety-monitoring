@@ -59,8 +59,6 @@ public class Door {
   public void changeState() {
     //this code basically sets door state by generating an integer between [0, MAX_STATES) and getting that index
     currentDoorState = doorStates.get(randGen.nextInt(doorStates.size()));
-    //signal state change on the server side
-    System.out.println(doorName+" state changed to "+currentDoorState);
   }
 
 }

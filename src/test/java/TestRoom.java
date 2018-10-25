@@ -36,11 +36,11 @@ class RoomTest {
     @Test
     void testWindowList() {
         Room testRoom = new Room("my room");
-        Window window1 = new Window(0, 1);
-        Window window2 = new Window(1, 1);
+        Window window1 = new Window("test0", 1);
+        Window window2 = new Window("test1", 1);
         testRoom.addWindow(window1);
         testRoom.addWindow(window2);
-		assertEquals(testRoom.getWindowByIndex(0), window1);
-		assertEquals(testRoom.getWindowByIndex(1), window2);
+		assertEquals(testRoom.getWindowByName("test0"), window1);
+		assertEquals(testRoom.getWindowByName("test1"), window2);
     }
 }

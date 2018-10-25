@@ -10,7 +10,7 @@ public class ServerLauncher{
     //main function
 	public static void main(String[] args) {
        //initialize the very important company simulation
-       VeryImportantCompany vic = VeryImportantCompany.getInstance();
+       //VeryImportantCompany vic = VeryImportantCompany.getInstance();
 
        //create the web service publishers for the doors and windows
 	   DoorServerPublisher doors =  new DoorServerPublisher();

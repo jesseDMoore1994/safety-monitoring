@@ -1,4 +1,4 @@
-package safety-monitoring;
+package safety_monitoring;
 import javax.xml.ws.Endpoint;
 import safety_monitoring.DoorServer;
  

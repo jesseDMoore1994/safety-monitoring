@@ -13,7 +13,7 @@ public class Window {
   //timer object used to keep time
   private Timer stateTimer = new Timer();
   //index of the door
-  private int windowNumber;
+  private String windowName;
 
   //an internal private class that is used to change state on an interval
   private static class MyWindowTimeTask extends TimerTask
@@ -31,19 +31,24 @@ public class Window {
       }
   }
 
-  //Door constructor takes window number and the timer interval for state change
-  public Window(int windowNumber, long period){
+  //Door constructor takes window name and the timer interval for state change
+  public Window(String windowName, long period){
     //add in all the possible window states
     windowStates.add("Open.");
     windowStates.add("Half Open.");
     windowStates.add("Closed but not Locked.");
     windowStates.add("Closed and Locked.");
-    //set the window number
-    this.windowNumber = windowNumber;
+    //set the window  name
+    this.windowName = windowName;
     //initialize window state
     changeState();
     //set interval timer to execute the run function of MyWindowTimeTask passing in our window reference
     stateTimer.schedule(new MyWindowTimeTask(this), 0, period);
+  }
+  
+  //get the name of the window
+  public String getName() {
+    return windowName;
   }
   
   //get the current state of the window
@@ -55,8 +60,6 @@ public class Window {
   public void changeState() {
     //this code basically sets window state by generating an integer between [0, MAX_STATES) and getting that index
     currentWindowState = windowStates.get(randGen.nextInt(windowStates.size()));
-    //signal state change on the server side
-    System.out.println("Window "+windowNumber+" state changed to "+currentWindowState);
   }
 
 }

@@ -12,5 +12,6 @@ import javax.jws.soap.SOAPBinding.Style;
 public interface DoorServer{
  
 	@WebMethod String DoorServer(String name);
+	@WebMethod boolean AddDoor(String name);
  
 }

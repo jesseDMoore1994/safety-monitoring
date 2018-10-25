@@ -73,12 +73,22 @@ To launch the server (Windows):
     build the project. (If not already built.)
     'java -cp build/libs/safety-monitoring-1.0.0.jar safety_monitoring.ServerLauncher'
 
+To populate the sensors for Very Important Company (Linux):
+    open a command prompt and navitgate to this directory.
+    build the project. (If not already built.)
+    'java -cp build/libs/safety-monitoring-1.0.0.jar safety_monitoring.PopulateVeryImportantCompany'
+
+To populate the sensors for Very Important Company (Windows):
+    open a command prompt and navitgate to this directory.
+    build the project. (If not already built.)
+    'java -cp build/libs/safety-monitoring-1.0.0.jar safety_monitoring.PopulateVeryImportantCompany'
+
 To use the client (Linux):
     open a command prompt and navigate to this directory.
     build the project. (If not already built.)
-    'java -cp build/libs/safety-monitoring-1.0.0.jar safety_monitoring.SafetyMonitoringClient [ "Window" | "Door" ] [ "VIP Door" | "Receptionist Door" | 0 | 1 ]'
+    'java -cp build/libs/safety-monitoring-1.0.0.jar safety_monitoring.SafetyMonitoringClient [ "Window" | "Door" | "Room" ] [ "VIP Door" | "Receptionist Door" | "VIPWindowNorth" | "VIPWindowEast" | "VIP Room" | "Receptionist Room" ]'
 
 To use the client (Windows):
     open a command prompt and navigate to this directory.
     build the project. (If not already built.)
-    'java -cp build/libs/safety-monitoring-1.0.0.jar safety_monitoring.SafetyMonitoringClient [ "Window" | "Door" ] [ "VIP Door" | "Receptionist Door" | 0 | 1 ]'
+    'java -cp build/libs/safety-monitoring-1.0.0.jar safety_monitoring.SafetyMonitoringClient [ "Window" | "Door" | "Room" ] [ "VIP Door" | "Receptionist Door" | "VIPWindowNorth" | "VIPWindowEast" | "VIP Room" | "Receptionist Room" ]'

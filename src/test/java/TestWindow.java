@@ -16,7 +16,7 @@ class WindowTest {
  
     @Test
     void testWindowState() {
-        Window testWindow = new Window(0, 1);
+        Window testWindow = new Window("test", 1);
         ArrayList<String> capturedStates = new ArrayList<String>();
         int i = 0;
         while( capturedStates.size() != 4 ) {
