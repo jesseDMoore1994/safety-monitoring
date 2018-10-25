@@ -12,6 +12,7 @@ public class VeryImportantCompany {
 
   //list of rooms
   private ArrayList<Room> rooms = new ArrayList<Room>();
+  private HashMap<String, Door> DoorDict = new HashMap<String, Door>();
   //there is only one possible instance of VeryImportantCompany, so we have a static reference
   private static VeryImportantCompany singleInstance = null;
 
@@ -98,6 +99,10 @@ public class VeryImportantCompany {
           //return the target door state
           return targetDoor.getState();
       }
+  }
+
+  public HashMap<String, Door> GetDoorList(){
+      return this.DoorDict;
   }
 
   //this is the factory method for the singleton behavior
