@@ -6,13 +6,13 @@ Problem description
 Two servers:
    doors:
        [
-           entry door,
+           Entry Door,
            VIP door
        ]
    windows:
        [
-           window 0,
-           window 1
+           VIPWindowNorth,
+           VIPWindowEast
        ]
 
 door states:
@@ -86,9 +86,9 @@ To populate the sensors for Very Important Company (Windows):
 To use the client (Linux):
     open a command prompt and navigate to this directory.
     build the project. (If not already built.)
-    'java -cp build/libs/safety-monitoring-1.0.0.jar safety_monitoring.SafetyMonitoringClient [ "Window" | "Door" | "Room" ] [ "VIP Door" | "Receptionist Door" | "VIPWindowNorth" | "VIPWindowEast" | "VIP Room" | "Receptionist Room" ]'
+    'java -cp build/libs/safety-monitoring-1.0.0.jar safety_monitoring.SafetyMonitoringClient [ "Window" | "Door" | "Room" ] [ "VIP Door" | "Entry Door" | "VIPWindowNorth" | "VIPWindowEast" | "VIP Room" | "Receptionist Room" ]'
 
 To use the client (Windows):
     open a command prompt and navigate to this directory.
     build the project. (If not already built.)
-    'java -cp build/libs/safety-monitoring-1.0.0.jar safety_monitoring.SafetyMonitoringClient [ "Window" | "Door" | "Room" ] [ "VIP Door" | "Receptionist Door" | "VIPWindowNorth" | "VIPWindowEast" | "VIP Room" | "Receptionist Room" ]'
+    'java -cp build/libs/safety-monitoring-1.0.0.jar safety_monitoring.SafetyMonitoringClient [ "Window" | "Door" | "Room" ] [ "VIP Door" | "Entry Door" | "VIPWindowNorth" | "VIPWindowEast" | "VIP Room" | "Receptionist Room" ]'
