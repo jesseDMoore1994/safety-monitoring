@@ -45,23 +45,39 @@ public class SafetyMonitoringClient{
 			Room room = vic.getRoomByName(args[1]);
 			
 			if (room != null){
+				//if we found the room, get the list of windows
 				ArrayList<Window> windows = room.getWindows();
-				System.out.println("--Windows in "+args[1]+"--");
+				// tell the user how many windows are in the room
+				System.out.println("--"+windows.size()+" windows in "+args[1]+"--");
+				// get the state of each window
 				for (Window window : windows){
 					//use the wsdl interface and print out the response
 					String response = windowServer.WindowServer(window.getName());
 					System.out.println(window.getName()+": "+response);
 				}
-				System.out.println("\n--Doors in "+args[1]+"--");
-				//Door
+				// get the list of doors for the room
+				ArrayList<Door> doors = room.getDoors();
+				// inform the user of how many doors are in the room
+				System.out.println("\n--"+doors.size()+" doors in "+args[1]+"--");
+				//get the state of each door
+				for (Door door : doors){
+					//use the wsdl interface and print out the response
+					String response = doorServer.DoorServer(door.getName());
+					System.out.println(door.getName()+": "+response);
+				}
 			} else {
+				// We didn't find the room. Inform the user
 				System.out.println(args[1]+" is not a room at Very Important Company");
 			}
         } else { //else we have an incorrect argument, print out an error
             String errStr = "First argument not recognized, select door sensors with the string ";
-            errStr += "\"Door\" or window sensors with the string \"Window\" as the first argument.";
+			errStr += "\"Door\" or window sensors with the string \"Window\" as the first argument. ";
+			errStr += "Or use \"Room\" as the first argument to get the status of all windows and doors ";
+			errStr += "in the specified room.";
             System.out.println(errStr);
-        }
+		}
+		//call System.exit to ensure the program ends
+		System.exit(0);
     }
  
 }

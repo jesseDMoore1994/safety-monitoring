@@ -69,7 +69,11 @@ public class VeryImportantCompany {
 			}
 		}
 		return allWindows;
-	}
+    }
+    
+    public HashMap<String, Door> getDoors(){
+        return DoorDict;
+    }
 
   //this function will return the state of the window with a name that matches the argument
   //from the VIP Room if it exists, otherwise it try to get a window and fail. We catch

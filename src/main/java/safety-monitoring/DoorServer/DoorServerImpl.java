@@ -14,18 +14,26 @@ public class DoorServerImpl implements DoorServer {
     public String DoorServer(String door_sensor) {
         
         // See if we have heard from this sensor. If so, get a reference to it
-        safety_monitoring.VeryImportantCompany VIC = safety_monitoring.VeryImportantCompany.getInstance();
-        HashMap<String, safety_monitoring.Door> DoorDict = VIC.GetDoorList();
-        Door targetDoor = DoorDict.getOrDefault(door_sensor, null);
+        Door targetDoor = DoorList.getOrDefault(door_sensor, null);
         if (targetDoor == null){
+            // if we don't know about this door, inform the caller
             return door_sensor+" is not currently being monitored.";
         } else {
+            // get the door's state
             return targetDoor.getState();
         }
     }
-
-
-
-
+	
+	public boolean AddDoor(String door_sensor) {
+		// see if the sensor is in the list already
+        Door targetDoor = DoorList.getOrDefault(door_sensor, null);
+        if (targetDoor == null){
+            // if the door wasn't found, add it
+            Door newDoor = new Door(door_sensor, 1000);
+            DoorList.put(door_sensor, newDoor);
+            targetDoor = newDoor;
+        } 
+		return targetDoor != null;
+	}
 }
 

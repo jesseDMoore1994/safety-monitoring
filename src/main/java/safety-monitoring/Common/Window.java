@@ -60,8 +60,6 @@ public class Window {
   public void changeState() {
     //this code basically sets window state by generating an integer between [0, MAX_STATES) and getting that index
     currentWindowState = windowStates.get(randGen.nextInt(windowStates.size()));
-    //signal state change on the server side
-    System.out.println(windowName+" state changed to "+currentWindowState);
   }
 
 }

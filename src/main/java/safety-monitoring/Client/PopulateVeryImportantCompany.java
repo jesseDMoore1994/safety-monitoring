@@ -25,7 +25,7 @@ public class PopulateVeryImportantCompany{
 
 		//create the server from the published wsdl document
 		Service doorService = Service.create(location_of_door_wsdl, name_of_door_service);
-		DoorServer door = doorService.getPort(DoorServer.class);
+		DoorServer doorServer = doorService.getPort(DoorServer.class);
 
 		//Create a Very Important Company
 		VeryImportantCompany vic = VeryImportantCompany.getInstance();
@@ -37,6 +37,16 @@ public class PopulateVeryImportantCompany{
 				System.out.println("Failed to add "+window.getName());
 			}
 		}
+		HashMap<String, Door> DoorDict = vic.getDoors();
+		for(Map.Entry<String, Door> door : DoorDict.entrySet()){
+			if(doorServer.AddDoor(door.getValue().getName())){
+				System.out.println("Added "+door.getValue().getName());
+			} else {
+				System.out.println("Failed to add "+door.getValue().getName());
+			}
+		}
+		//call System.exit to ensure the program ends
+		System.exit(0);
     }
  
 }
